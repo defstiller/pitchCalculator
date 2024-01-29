@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Roof Pitch Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Roof Pitch Calculator</h1>
+        <form id="roofPitchForm">
+            <label for="wholeRise">Rise (inches):</label>
+            <input type="number" id="wholeRise" required>
+            <input type="text" id="fractionalRise" required>
+            <br>
+            <label for="wholeRun">Run (inches):</label>
+            <input type="number" id="wholeRun" required>
+            <input type="text" id="fractionalRun" required>
+            <br>
+
+            <button type="button" onclick="calculatePitch()">Calculate</button>
+        </form>
+        <div id="results">
+            <p>Cut Angle (Bottom): <span id="angleResult"></span> degrees</p>
+            <p>Cut Angle (Top): <span id="angleTopResult"></span> degrees</p>
+            <p>Beam Length : <span id="beamLengthResult"></span> in</p>
+            <p>Pitch (Rise over 12 inches): <span id="pitchResult"></span> in</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
