@@ -14,18 +14,22 @@
             <input type="number" id="wholeRise" required>
             <input type="text" id="fractionalRise" required>
             <br>
-            <label for="wholeRun">Run (inches):</label>
-            <input type="number" id="wholeRun" required>
-            <input type="text" id="fractionalRun" required>
+            <label for="wholeWallLength">Whole Wall Length (inches):</label>
+            <input type="number" id="wholeWallLength" required>
+            <input type="text" id="wholeWallLengthFractions" required>
+            <br>
+            <label for="wholeWallLength">Number of openings:</label>
+            <input type="number" id="numberOfOpenings" required>
             <br>
 
-            <button type="button" onclick="calculatePitch()">Calculate</button>
+            <button type="button" onclick="calculateRoofMeasurements()">Calculate</button>
         </form>
         <div id="results">
             <p>Cut Angle (Bottom) / Perling ( Top + bottom ): <span id="angleResult"></span> degrees</p>
             <p>Cut Angle (Top): <span id="angleTopResult"></span> degrees</p>
-            <p>Beam Length : <span id="beamLengthResult"></span> in</p>
-            <p>Pitch (Rise over 12 inches): <span id="pitchResult"></span> in</p>
+            <p>Center Beam Length : <span id="centerPieceLengthResult"></span> in</p>
+            <p>Pitch (Rise over 12 inches): <span id="pitchAngleResult"></span> in</p>
+            <p>Up/Down Beam length: <span id="beamLengthResult"> in - after subtracting for perling</span></p>
         </div>
     </div>
     <script src="script.js"></script>
